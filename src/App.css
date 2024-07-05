@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: darkcyan;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 30px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr 2.5fr;
+}
+
+.formcss {
+  width: 50%;
+  font-weight: bold;
+  padding: 15px;
+  padding-top: 50px;
+  padding-left: 20%;
+}
+
+.nav-part {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul li {
+  text-decoration: none;
+  color: black;
+}
+
+.table-size{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 40px;
+}
