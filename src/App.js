@@ -18,10 +18,10 @@ class App extends Component {
             <nav className="nav-part">
               <ul>
                 <li><Link className="nav-link" to="/">Home</Link></li>
-                <li><Link to="/employees">Employees</Link></li>
-                <li><Link to="/employeesdata">Employees List</Link></li>
-                <li><Link to="/vendors">Vendors</Link></li>
-                <li><Link to="/vendorsdata">Vendors List</Link></li>
+                <li><Link className="nav-link" to="/employees">Employees</Link></li>
+                <li><Link className="nav-link" to="/employeesdata">Employees List</Link></li>
+                <li><Link className="nav-link" to="/vendors">Vendors</Link></li>
+                <li><Link className="nav-link" to="/vendorsdata">Vendors List</Link></li>
               </ul>
             </nav>
           </header>

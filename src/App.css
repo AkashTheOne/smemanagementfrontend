@@ -3,10 +3,10 @@
 }
 
 .App-header {
-  background-color: darkcyan;
+  background-color: rgb(50, 92, 92);
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: white;
   padding: 30px;
 }
@@ -29,13 +29,17 @@ ul {
   font-weight: bold;
 }
 
-ul li {
-  text-decoration: none;
-  color: black;
-}
-
 .table-size{
   width: 80%;
   margin-left: 10%;
   margin-top: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-part ul {
+  list-style-type: none;
 }
