@@ -46,6 +46,8 @@ ul {
 
 .table-size .ant-table-thead > tr > th {
   background-color: #1677ff;
+  color:black;
+  text-align: center;
 }
 
 .table-size .ant-table-tbody > tr > td {
