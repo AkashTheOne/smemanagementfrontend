@@ -32,8 +32,8 @@ class VendorList extends Component {
   render() {
     return (
       <div>
-        <h2>Vendors</h2>
         <div className="table-size">
+        <h2>Vendors</h2>
         <Table dataSource={this.state.vendors} rowKey="email">
           <Table.Column title="Name" dataIndex="name" key="name" />
           <Table.Column title="Email" dataIndex="email" key="email" />

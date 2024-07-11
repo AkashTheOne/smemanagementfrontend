@@ -26,8 +26,8 @@ class EmployeeList extends Component {
   render() {
     return (
       <div>
-        <h2>Employees List</h2>
         <div className="table-size">
+        <h2>Employees</h2>
           <Table dataSource={this.state.employees} rowKey="email">
             <Table.Column title="Employee Name" dataIndex="name" key="name" />
             <Table.Column
