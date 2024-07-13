@@ -25,18 +25,6 @@ class VendorForm extends Component {
         this.setState({ [e.target.name]: e.target.value });
     };
 
-    handleAddVendor = () => {
-        const { name, email, upi } = this.state;
-        if (name && email && upi) {
-          this.setState((prevState) => ({
-            vendors: [...prevState.vendors, { name, email, upi }],
-            name: '',
-            email: '',
-            upi: ''
-          }));
-        }
-      };
-
     handleSubmit = async (e) => {
         try {
             await axios.post('http://localhost:8080/api/vendors', this.state);
@@ -62,7 +50,7 @@ class VendorForm extends Component {
                     rules={[
                         {
                             required:true,
-                            message: "Please enter proper email id!"
+                            message: "Please enter email id!"
                         }
                     ]}
                     >
@@ -75,7 +63,7 @@ class VendorForm extends Component {
                     rules={[
                         {
                             required:true,
-                            message: "Please enter your name!",
+                            message: "Please enter your name",
                         }
                     ]}
                     >
@@ -88,7 +76,7 @@ class VendorForm extends Component {
                     rules={[
                         {
                             required:true,
-                            message: "Please enter your designation!",
+                            message: "Please enter your UPI ID",
                         }
                     ]}
                     >
@@ -96,7 +84,7 @@ class VendorForm extends Component {
                     </Form.Item>
 
                     <Form.Item wrapperCol={{offset:7}}>
-                        <Button type='primary' htmlType='submit' onClick={this.handleAddVendor}> Add Vendor</Button>
+                        <Button type='primary' htmlType='submit'> Add Vendor</Button>
                     </Form.Item>
                     </Form>
             </div>

@@ -50,7 +50,7 @@ class EmployeeForm extends Component {
                     rules={[
                         {
                             required:true,
-                            message: "Please enter proper email id!"
+                            message: "Please enter email id"
                         }
                     ]}
                     >
@@ -63,7 +63,7 @@ class EmployeeForm extends Component {
                     rules={[
                         {
                             required:true,
-                            message: "Please enter your name!",
+                            message: "Please enter your name",
                         }
                     ]}
                     >
@@ -76,7 +76,7 @@ class EmployeeForm extends Component {
                     rules={[
                         {
                             required:true,
-                            message: "Please enter your designation!",
+                            message: "Please enter your designation",
                         }
                     ]}
                     >
@@ -89,7 +89,7 @@ class EmployeeForm extends Component {
                     rules={[
                         {
                             required:true,
-                            message: "Please enter your designation!",
+                            message: "Please enter your CTC",
                         }
                     ]}
                     >
