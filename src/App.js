@@ -7,14 +7,36 @@ import EmployeeForm from "./component/employeeform/EmployeeForm";
 import EmployeeList from "./component/employeeform/EmployeeList";
 import VendorForm from "./component/vendorform/VendorForm";
 import VendorList from "./component/vendorform/VendorList";
+import Login from "./component/logincomponent/Login";
+import { Button } from "antd";
 
 class App extends Component {
+
+  state={
+    flag:false
+  };
+
+  onChangeValue=(flagValue)=>{
+    this.setState({flag:flagValue})
+  };
+
+  onLogout=()=>{
+    this.setState({flag:false})
+  };
+
   render() {
     return (
+      <div>
+         {!this.state.flag ? (
+          <Login onChangeValue={this.onChangeValue} />
+        ) : (
       <Router>
         <div className="App">
           <header>
-            <h1 className="App-header">SME Management</h1>
+            <div className="App-header">
+            <h1>SME Management</h1>
+            <span className="logoutButtonCss"><Button htmlType="button" onClick={this.onLogout}>Logout</Button></span>
+            </div>
             <nav className="nav-part">
               <ul>
                 <li><Link className="nav-link" to="/">Home</Link></li>
@@ -36,6 +58,8 @@ class App extends Component {
           </div>
         </div>
       </Router>
+      )}
+      </div>
     );
   }
 }
