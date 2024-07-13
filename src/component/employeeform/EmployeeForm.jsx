@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, message } from 'antd';
 
 class EmployeeForm extends Component {
     state = {
@@ -27,15 +27,16 @@ class EmployeeForm extends Component {
     handleSubmit = async (e) => {
         try {
             await axios.post('http://localhost:8080/api/employees', this.state);
-            alert('Employee added successfully!');
             this.setState({
                 email: '',
                 name: '',
                 designation: '',
                 ctc: ''
+            },()=>{
+                message.success('Employee added successfully!');
             });
         } catch (error) {
-            alert('Error adding employee: ' + error.message);
+            message.error('Error adding employee: ' + error.message);
         }
     };
 

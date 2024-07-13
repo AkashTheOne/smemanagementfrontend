@@ -66,7 +66,7 @@ class App extends Component {
 
 const Home = () => (
   <div style={{margin:"200px"}}>
-    <h2>Welcome to Payment Management</h2>
+    <h2>Welcome to SME Management</h2>
   </div>
 );
 

@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, message } from 'antd';
 
 class VendorForm extends Component {
     state = {
@@ -40,14 +40,15 @@ class VendorForm extends Component {
     handleSubmit = async (e) => {
         try {
             await axios.post('http://localhost:8080/api/vendors', this.state);
-            alert('Vendor added successfully!');
             this.setState({
                 email: '',
                 name: '',
                 upi: ''
+            },()=>{
+                message.success('Vendor added successfully!');
             });
         } catch (error) {
-            alert('Error adding vendor: ' + error.message);
+            message.error('Error adding Vendor: ' + error.message);
         }
     };
 

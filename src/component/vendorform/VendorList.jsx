@@ -15,7 +15,6 @@ class VendorList extends Component {
     try {
       message.success(`Email sent to ${email}`);
     } catch (error) {
-      console.error("Error sending email: ", error);
       message.error(`Failed to send email to ${email}`);
     }
   };
